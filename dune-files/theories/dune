@@ -1,4 +1,5 @@
 (coq.theory
- (name ExtLib))
+ (name ExtLib)
+ (package coq-ext-lib))
 
 (include_subdirs qualified)
