@@ -1,1 +1,9 @@
+
+(rule
+ (targets coq-pkgs)
+ (deps
+  (package coq-ext-lib))
+ (action
+  (run jscoq build workdir/theories --top ExtLib --package coq-pkgs/extlib.coq-pkg)))
+
 (dirs workdir)
