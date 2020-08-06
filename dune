@@ -6,4 +6,8 @@
  (action
   (run jscoq build workdir/theories --top ExtLib --package coq-pkgs/extlib.coq-pkg)))
 
+(alias
+ (name all)
+ (deps package.json))
+
 (dirs workdir)
