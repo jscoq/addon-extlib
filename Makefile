@@ -12,7 +12,7 @@ get: $(WORKDIR)
 $(WORKDIR):
 	git clone --recursive --depth=1 -b $(TAG) $(REPO) $(WORKDIR)
 	( cd $(WORKDIR) && git apply ../extlib.patch )
-	cp -r dune-files/ $(WORKDIR)
+	cp -r dune-files/* $(WORKDIR)/
 
 install:
 	dune install coq-ext-lib
