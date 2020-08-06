@@ -10,7 +10,7 @@ all: $(WORKDIR)
 get: $(WORKDIR)
 
 $(WORKDIR):
-	git clone --depth=1 -b $(TAG) $(REPO) $(WORKDIR)
+	git clone --recursive --depth=1 -b $(TAG) $(REPO) $(WORKDIR)
 	( cd $(WORKDIR) && git apply ../extlib.patch )
 	cp -r dune-files/ $(WORKDIR)
 
