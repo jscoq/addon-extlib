@@ -4,7 +4,8 @@
  (deps
   (package coq-ext-lib))
  (action
-  (run jscoq build workdir/theories --top ExtLib --package coq-pkgs/extlib.coq-pkg)))
+  (run npx %{env:pkgtool=jscoq} build workdir/theories --top ExtLib
+                       --package coq-pkgs/extlib.coq-pkg)))
 
 (alias
  (name all)
